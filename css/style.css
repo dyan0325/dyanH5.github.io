@@ -1,0 +1,224 @@
+* {
+    margin: 0px;/*设置四周边距都为0*/
+    box-sizing: border-box;/*宽高的设置值包括border等*/
+}
+
+body {
+    background-image: url(../img/zhuye.jpg);/*设置背景图片*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;/*设置背景图不随网页滑动而改变*/
+    background-size: cover;
+}
+/* 顶部导航条 */
+.top {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+.top .an,.a {
+  float: left;
+  display: block;/*将链接变为块元素*/
+  color: black;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;/*去掉链接的下划线*/
+ }
+ 
+/* 链接颜色修改 */
+.top .an:hover {
+  background-color: #ddd;
+  color: black;
+}
+.a{
+  color: red ;
+  font-family: "华文行楷";
+  font-size: 32px;
+}
+/*正中间的字*/
+
+audio {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+}
+
+.leftcolumn {
+    float: left;
+    width: 10%;
+}
+
+.centercolumn {
+    margin: auto;
+    width: 80%;
+    height:1000px;
+    padding: 10px;
+    
+}
+
+.rightcolumn {
+    float: left;
+    width: 10%;
+}
+
+/* 文章卡片 */
+.card {
+	background-image: url(../img/皮影戏.jpg);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 50px;   
+}
+.card1 {
+	background-image: url(../img/shufa.jpg);
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 50px;   
+}
+#biaoti {
+    text-align: center;
+}
+
+/* 列后面清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 底部 */
+.footer {
+    background-color: black;
+    margin-top: 300px;
+}
+
+/*中间的字效果*/
+.btn {
+    width: 18%;
+    height: 60px;
+    position: absolute;
+    top: 65%;
+    left: 41%;
+    background-image: linear-gradient(rgba(211, 104, 29, 0.95),rgba(5,72,99,0.95));
+    border-radius: 40px;
+    border-color: dodgerblue;
+}
+
+.btn p{
+        line-height: 60px;
+        font-size: 22px;
+        color: black;
+    }
+.bt {
+    cursor: pointer; /*使鼠标放上边显示手指形状*/
+    width: 25%; /*设置宽*/
+    height: 50px; /*设置高*/
+    display: block; /*行内元素设置宽高不生效，使用display:block;可以将行内元素设置为块集元素 */
+    text-align: center; /*文字在容器中横向居中*/
+    line-height: 40px; /*当数值与height一样的时候文字垂直居中*/
+    text-decoration: none; /*将文字下划线去除*/
+    background-image: linear-gradient(rgba(211, 104, 29, 0.95),rgba(5,72,99,0.95)); /*设置元素背景颜色：渐变*/
+    color: rgba(0, 0, 0, 0.60); /*设置文字颜色*/
+    border: none;  /*去除边框*/
+    margin-bottom: 10px; /*下部外边框距离10像素*/
+    margin: auto;  /*使按钮居中*/
+    font-size: 20px; /*设置字体大小*/
+}
+.but,.lan{
+	float: right;
+	margin-top: 11px;
+}
+.riqi{
+	margin-top: 25px;
+	float: right;
+	color: rgb(255,255,255);
+}
+.box01{
+    color: #434343;
+    position: relative;
+    margin: 20px 20px;
+    float: right;
+}
+.box01 input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none ;
+    outline: 0;
+    width: 270px;
+    height: 30px;
+    border:0px solid #fff;
+    border-radius: 20px;
+    box-shadow:0 0 5px 2px rgba(0,0,0,0.1);
+    padding: 0 30px 0 15px;
+}
+.box01 label{
+    font-size: 16px;
+    z-index: 2;
+    position: absolute;
+    left: 109px;
+    top:15%;
+    color: #b2b2b2;
+}
+.icon{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image: url(../img/5683.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5%;
+    left: 235px;
+    z-index: 2;
+}
+
+.left{
+	width: 200px;
+    height: 420px;
+    margin: 70px auto;
+	background: rgba(50,50,50,0.4);
+}
+
+.left_1{
+	font-family: "华文行楷";
+	font-size: 26px;
+	color: red;
+	font-style: normal;
+}
+.touxiang {
+	margin-top: 35px;
+}
+.tx{
+	width: 100px;
+    height: 100px;
+}
+.zh{
+	color: rgb(255,255,255);
+}
+#zhhz{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.zh{
+	float: left;
+}
+#zhanghao{
+	width: 130px;
+	float: right;
+}
+.butt{
+	font-size: 20px;
+	width: 80px;
+	margin-top: 20px;
+}
+.xiju{
+	height: 500px;
+	width: 700px;
+	position: relative;
+}
+#xj{
+	left: 10px;
+	top: 65px;
+	position: absolute;
+}
+

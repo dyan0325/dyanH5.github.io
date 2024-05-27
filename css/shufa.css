@@ -1,0 +1,54 @@
+
+.jumpBox1{
+	animation: jumpBoxHandler 3.1s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 10px;
+	top: 50px;
+}
+.jumpBox2{
+	animation: jumpBoxHandler 2.9s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 155px;
+	top: 160px;
+}
+.jumpBox3{
+	animation: jumpBoxHandler 3.2s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 318px;
+	top: 40px;
+}
+.jumpBox4{
+	animation: jumpBoxHandler 3s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 455px;
+	top: 175px;
+}
+.jumpBox5{
+	animation: jumpBoxHandler 3.4s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 585px;
+	top: 45px;
+}
+.jumpBox6{
+	animation: jumpBoxHandler 2.8s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 730px;
+	top: 179px;
+}
+.jumpBox7{
+	animation: jumpBoxHandler 2.5s infinite;/* 1.8s 事件完成时间周期 infinite无限循环 */
+	position: absolute;
+	left: 845px;
+	top: 56px;
+}
+@keyframes jumpBoxHandler { /* css事件 */
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 50px); /* 可配置跳动方向 */
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/top.css" />
+<title>人物</title>
+<style>
+  body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-image: url(img/bj5.jpg);/*设置背景图片*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;/*设置背景图不随网页滑动而改变*/
+    background-size: cover;'
+  }
+  .left-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content:center;
+	align-items:center;
+	float: left;
+	width: 75%;
+	height: 100%;
+  }
+  .image-area {
+    flex: 1;
+    background: rgba(255,255,255,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-area {
+    flex: 1;
+    background: rgba(255,255,255,0);
+    padding: 10px;
+    width: 800px;
+  }
+  .right-block {
+    flex: 0 0 200px;
+    background: (255,255,255,0.5);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    float: left;
+    width: 25%;
+    height: 100%;
+  }
+  /*按钮特效*/
+  button {
+    /*width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;*/
+   width: 80%;
+    line-height: 38px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+    border-radius: 5px;
+    margin: 0 20px 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+	.button.black{
+	border:1px solid #333;
+	box-shadow: 0 1px 2px #8b8b8b inset,0 -1px 0 #3d3d3d inset,0 -2px 3px #8b8b8b inset;
+	background: -webkit-linear-gradient(top,#656565,#4c4c4c);
+	background: -moz-linear-gradient(top,#656565,#4a4a4a);
+	background: linear-gradient(top,#656565,#4a4a4a);
+	}
+	.button.red{
+	border:1px solid #b42323;
+	box-shadow: 0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;
+	background: -webkit-linear-gradient(top,#d53939,#b92929);
+	background: -moz-linear-gradient(top,#d53939,#b92929);
+	background: linear-gradient(top,#d53939,#b92929);
+	}
+	.button.yellow{
+	border:1px solid #d2a000;
+	box-shadow: 0 1px 2px #fedd71 inset,0 -1px 0 #a38b39 inset,0 -2px 3px #fedd71 inset;
+	background: -webkit-linear-gradient(top,#fece34,#d8a605);
+	background: -moz-linear-gradient(top,#fece34,#d8a605);
+	background: linear-gradient(top,#fece34,#d8a605);
+	}
+	.button.green{
+	border:1px solid #64c878;
+	box-shadow: 0 1px 2px #b9ecc4 inset,0 -1px 0 #6c9f76 inset,0 -2px 3px #b9ecc4 inset;
+	background: -webkit-linear-gradient(top,#90dfa2,#84d494);
+	background: -moz-linear-gradient(top,#90dfa2,#84d494);
+	background: linear-gradient(top,#90dfa2,#84d494);
+	}
+	.button.blue{
+	border:1px solid #1e7db9;
+	box-shadow: 0 1px 2px #8fcaee inset,0 -1px 0 #497897 inset,0 -2px 3px #8fcaee inset;
+	background: -webkit-linear-gradient(top,#42a4e0,#2e88c0);
+	background: -moz-linear-gradient(top,#42a4e0,#2e88c0);
+	background: linear-gradient(top,#42a4e0,#2e88c0);
+	}
+	.black:hover{
+	background: -webkit-linear-gradient(top,#818181,#575757);
+	background: -moz-linear-gradient(top,#818181,#575757);
+	background: linear-gradient(top,#818181,#575757);
+	}
+	.red:hover{
+	background: -webkit-linear-gradient(top,#eb6f6f,#c83c3c);
+	background: -moz-linear-gradient(top,#eb6f6f,#c83c3c);
+	background: linear-gradient(top,#eb6f6f,#c83c3c);
+	}
+	.yellow:hover{
+	background: -webkit-linear-gradient(top,#ffd859,#e3bb38);
+	background: -moz-linear-gradient(top,#ffd859,#e3bb38);
+	background: linear-gradient(top,#ffd859,#e3bb38);
+	}
+	.green:hover{
+	background: -webkit-linear-gradient(top,#aaebb9,#82d392);
+	background: -moz-linear-gradient(top,#aaebb9,#82d392);
+	background: linear-gradient(top,#aaebb9,#82d392);
+	}
+	.blue:hover{
+	background: -webkit-linear-gradient(top,#70bfef,#4097ce);
+	background: -moz-linear-gradient(top,#70bfef,#4097ce);
+	background: linear-gradient(top,#70bfef,#4097ce);
+	}
+	.black:active{
+	top:1px;
+	box-shadow: 0 1px 3px #111 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#424242,#575757);
+	background: -moz-linear-gradient(top,#424242,#575757);
+	background: linear-gradient(top,#424242,#575757);
+	}
+	.red:active{
+	top:1px;
+	box-shadow: 0 1px 3px #5b0505 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#b11a1a,#bf2626);
+	background: -moz-linear-gradient(top,#b11a1a,#bf2626);
+	background: linear-gradient(top,#b11a1a,#bf2626);
+	}
+	.yellow:active{
+	top:1px;
+	box-shadow: 0 1px 3px #816b1f inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#d3a203,#dba907);
+	background: -moz-linear-gradient(top,#d3a203,#dba907);
+	background: linear-gradient(top,#d3a203,#dba907);
+	}
+	.green:active{
+	top:1px;
+	box-shadow: 0 1px 3px #4d7254 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#5eac6e,#72b37e);
+	background: -moz-linear-gradient(top,#5eac6e,#72b37e);
+	background: linear-gradient(top,#5eac6e,#72b37e);
+	}
+	.blue:active{
+	top:1px;
+	box-shadow: 0 1px 3px #114566 inset,0 3px 0 #fff;
+	background: -webkit-linear-gradient(top,#1a71a8,#1976b1);
+	background: -moz-linear-gradient(top,#1a71a8,#1976b1);
+	background: linear-gradient(top,#1a71a8,#1976b1);
+	}
+
+</style>
+</head>
+<body style="flex-direction: column;">
+	 	
+		<div class="top">
+	    	<a href="#" target="_self" class="a" >中国传统文化</a>
+	        <a href="index.html" target="_self" class="an">首页</a>
+	        <a href="人物.html" target="_self" class="an">人物</a>
+	        <a href="资源.html" target="_self" class="an">资源</a>
+	        <a href="百科.html" target="_self" class="an">百科</a>
+	        <!--日期，格式年月日 星期几 农历几月几-->
+	        <div class="riqi" >
+				<SCRIPT language=JavaScript>
+				
+					function CalConv()
+					{
+						FIRSTYEAR = 1998;
+						LASTYEAR = 2031;
+					 
+						today = new Date();
+						SolarYear = today.getFullYear();
+						SolarMonth = today.getMonth() + 1;
+						SolarDate = today.getDate();
+						Weekday = today.getDay();
+						LunarCal = [
+							new tagLunarCal( 27, 5, 3, 43, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1 ),
+							new tagLunarCal( 46, 0, 4, 48, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1 ),
+							new tagLunarCal( 35, 0, 5, 53, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1 ),
+							new tagLunarCal( 23, 4, 0, 59, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 42, 0, 1, 4, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 31, 0, 2, 9, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0 ),
+							new tagLunarCal( 21, 2, 3, 14, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 39, 0, 5, 20, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 28, 7, 6, 25, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1 ),
+							new tagLunarCal( 48, 0, 0, 30, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1 ),
+							new tagLunarCal( 37, 0, 1, 35, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1 ),
+							new tagLunarCal( 25, 5, 3, 41, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 ),
+							new tagLunarCal( 44, 0, 4, 46, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1 ),
+							new tagLunarCal( 33, 0, 5, 51, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 22, 4, 6, 56, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ),
+							new tagLunarCal( 40, 0, 1, 2, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0 ),
+							new tagLunarCal( 30, 9, 2, 7, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 49, 0, 3, 12, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 38, 0, 4, 17, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0 ),
+							new tagLunarCal( 27, 6, 6, 23, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1 ),
+							new tagLunarCal( 46, 0, 0, 28, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0 ),
+							new tagLunarCal( 35, 0, 1, 33, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0 ),
+							new tagLunarCal( 24, 4, 2, 38, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 42, 0, 4, 44, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 31, 0, 5, 49, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0 ),
+							new tagLunarCal( 21, 2, 6, 54, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1 ),
+							new tagLunarCal( 40, 0, 0, 59, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1 ),
+							new tagLunarCal( 28, 6, 2, 5, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0 ),
+							new tagLunarCal( 47, 0, 3, 10, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1 ),
+							new tagLunarCal( 36, 0, 4, 15, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1 ),
+							new tagLunarCal( 25, 5, 5, 20, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0 ),
+							new tagLunarCal( 43, 0, 0, 26, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1 ),
+							new tagLunarCal( 32, 0, 1, 31, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0 ),
+							new tagLunarCal( 22, 3, 2, 36, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0 ) ];
+					 
+						SolarCal = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+					 
+						SolarDays = [ 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365, 396, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366, 397 ];
+					 
+						if ( SolarYear <= FIRSTYEAR || SolarYear > LASTYEAR ) return 1;
+							sm = SolarMonth - 1;
+						if ( sm < 0 || sm > 11 ) return 2;
+							leap = GetLeap( SolarYear );
+						if ( sm == 1 )
+							d = leap + 28;
+						else
+							d = SolarCal[sm];
+						if ( SolarDate < 1 || SolarDate > d ) return 3;
+							y = SolarYear - FIRSTYEAR;
+							acc = SolarDays[ leap*14 + sm ] + SolarDate;
+							kc = acc + LunarCal[y].BaseKanChih;
+							Kan = kc % 10;
+							Chih = kc % 12;
+					 
+							Age = kc % 60;
+						if ( Age < 22 )
+							Age = 22 - Age;
+						else
+							Age = 82 - Age;
+					 
+						if ( acc <= LunarCal[y].BaseDays ) {
+							y--;
+							LunarYear = SolarYear - 1;
+							leap = GetLeap( LunarYear );
+							sm += 12;
+							acc = SolarDays[leap*14 + sm] + SolarDate;
+						}
+						else
+							LunarYear = SolarYear;
+							l1 = LunarCal[y].BaseDays;
+						for ( i=0; i<13; i++ ) {
+							l2 = l1 + LunarCal[y].MonthDays[i] + 29;
+						if ( acc <= l2 ) break;
+							l1 = l2;
+						}
+						LunarMonth = i + 1;
+						LunarDate = acc - l1;
+						im = LunarCal[y].Intercalation;
+						if ( im != 0 && LunarMonth > im ) {
+							LunarMonth--;
+						if ( LunarMonth == im ) LunarMonth = -im;
+						}
+						if ( LunarMonth > 12 ) LunarMonth -= 12;
+						today=new Date();
+						function initArray(){
+							this.length=initArray.arguments.length
+							for(var i=0;i<this.length;i++)
+							this[i+1]=initArray.arguments[i] 
+						}
+						var d=new initArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+						document.write("", today.getFullYear(),"年",today.getMonth()+1,"月",today.getDate(),"日 ",d[today.getDay()+1],"");
+					 	
+						months = ["一","二","三","四","五","六","七","八","九","十","十一","十二"];
+					 	
+						days = ["初一","初二","初三","初四","初五","初六","初七","初八","初九","初十","十一","十二","十三","十四","十五","十六","十七","十八","十九","二十","廿一","廿二","廿三","廿四","廿五","廿六","廿七","廿八","廿九","三十"];
+					 
+						document.write( " 农历"+months[LunarMonth-1]+"月" + days[LunarDate-1] + "");
+					 
+						return 0;
+					}
+					 
+					function GetLeap( year )
+					{
+						if ( year % 400 == 0 )
+							return 1;
+						else if ( year % 100 == 0 )
+							return 0;
+						else if ( year % 4 == 0 )
+							return 1;
+						else
+							return 0;
+					}
+					function tagLunarCal( d, i, w, k, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13) {
+						this.BaseDays = d;
+						this.Intercalation = i;
+						this.BaseWeekday = w;
+						this.BaseKanChih = k;
+						this.MonthDays = [ m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13 ];
+					}
+				</SCRIPT>
+				<FONT color=#000000><SCRIPT>CalConv();</SCRIPT></FONT></a>
+	
+		  	</div>
+	         <div class="box01">
+	        	<input type="text" id="tip" placeholder="请输入想要的内容！">
+	        	<i class="icon"></i>
+	    	</div><!--搜索栏和搜索按钮-->
+	    </div>
+	    <div id="zhong">
+    	<div class="left-block">
+		  <div class="image-area" style="width: 500px; height: 240px">
+		    <img id="image" src="img/rw1.jpg" alt="Image" style="max-width: 100%; " width="100%" height="100%">
+		  </div>
+		  <br />
+		  <div class="content-area" >
+		    <p id="content" style="text-indent: 2em;" align="center">伊玛堪说唱传承人卢艳华：让民族文化瑰宝代代相传</p >
+		    	<br />
+			<p id="content1" style="text-indent: 2em;"  >卢艳华出生在黑龙江省双鸭山市饶河县四排赫哲族乡，是个土生土长的赫哲族人，爷爷曾是当地有名的伊玛堪说唱歌手。从小，她就听家人讲爷爷的故事，对伊玛堪充满了向往。2013年，一次偶然的机会，卢艳华了解到饶河县非物质文化遗产保护中心开设了伊玛堪传习课，她好奇地前去试听。尽管听得一知半解，但她依然被伊玛堪抑扬顿挫的旋律和充满浓郁民族风情的表演形式深深吸引，很快就开始了正式学习。没想到，这一学就是十几年。</p>
+		  </div>
+		</div>
+		<div class="right-block">
+		  <button type="button" class="button black larrow" onclick="changeContent('img/rw1.jpg', '伊玛堪说唱传承人卢艳华：让民族文化瑰宝代代相传','卢艳华出生在黑龙江省双鸭山市饶河县四排赫哲族乡，是个土生土长的赫哲族人，爷爷曾是当地有名的伊玛堪说唱歌手。从小，她就听家人讲爷爷的故事，对伊玛堪充满了向往。2013年，一次偶然的机会，卢艳华了解到饶河县非物质文化遗产保护中心开设了伊玛堪传习课，她好奇地前去试听。尽管听得一知半解，但她依然被伊玛堪抑扬顿挫的旋律和充满浓郁民族风情的表演形式深深吸引，很快就开始了正式学习。没想到，这一学就是十几年。')">
+		  	伊玛堪说唱传承人
+		  </button>
+		  <button type="button" class="button red larrow" onclick="changeContent('img/rw2.jpg', '匠心独运，大漆之美—— 非遗传承人范福安的漆彩人生','范福安先生是中国当代大漆艺术的领军人物，1964年出生于安徽省黄山市，现为非物质文化遗产项目徽州髤饰技艺省级代表性传承人、全国工艺美术行业理事会副理事长、国家艺术基金专家委员会复评委员、吉林艺术学院硕士生导师、同济大学中意文化中心首位驻地艺术家。')">
+		      匠心独运，大漆之美
+		  </button>
+		  <button type="button" class="button yellow larrow" onclick="changeContent('img/rw3.jpg', '国家级非遗项目（苏绣）代表性传承人姚建萍：用精品苏绣讲好中国故事','姚建萍生长在苏州镇湖的一个苏绣世家，七八岁的时候，在母亲的影响下，她拿起了绣花针，跟随母亲和表姐一起学习刺绣技艺。12岁时，她已经能独立完成一条刺绣领带。一直到现在，她也没有放下这根绣花针，苏绣贯穿了她的人生。')">
+		   国家级非遗项目
+		  </button>
+		  <button type="button" class="button green larrow" onclick="changeContent('img/rw4.png', ' 陆永江：“总理买过我绣的刺绣”','陆永江出生在贵州省黔东南苗族侗族自治州黎平县永从镇上寨村的一个侗族家庭。在她的记忆中，自那场意外之后的很长一段时间里，与她为伴的是身心的伤痛、行动的不便和隐藏在亲人们表情和言语之中的小心翼翼、校园里小伙伴们的不理解甚至是奚落…… 尽管命运和陆永江开了一个不小的玩笑，但种种遭遇非但没有让她自暴自弃、丧失自信，反而塑造了她坚毅的性格和做事执着的态度。大学毕业后，陆永江成为了家乡一所学校的代课老师。或许，在大多数人看来，接下来结婚、生子按部就班地过平凡的小日子就是最好的归宿，但命运对她的历练仿佛并未停止，她似乎总是被生活推搡着，去挑战不可能。')">
+		  	总理买过我绣的刺绣
+		  </button>
+		  <button type="button" class="button blue larrow" onclick="changeContent('img/rw5.jpg', '以刀代笔 镌刻人生——访杨柳青木版年画代表性传承人王文达','刻版业内的规矩是学徒三年零一个月出师，王文达十六岁成为画社学员，由于第一年主要学习文化课和专业基础知识，因此在进入画社的第四个年头自己年满二十岁时才正式学成出师。在这四年的学徒经历中，王文达通过大量的刻版实操反复磨练专业技能，将师父传授的雕刻技法完整掌握，技艺水平日趋精进，成为画社新一代刻工中的杰出人才，只待日后的工作实践中能将所学的刻版技法融会贯通，形成自己独特的技艺风格和艺术面貌。')">
+		  	以刀代笔 镌刻人生
+		  </button>
+		</div>
+		
+		<script>
+		  function changeContent(imageSrc, contentText,contentText1) {
+		    document.getElementById('image').src = imageSrc;
+		    document.getElementById('content').textContent = contentText;
+		    document.getElementById('content1').textContent = contentText1;
+		  }
+		</script>
+    </div>
+ 
+</body>
+</html>

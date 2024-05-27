@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>百科</title>
+		<style>
+			 * {
+	            margin: 0;
+	            padding: 0;
+	        }
+	        
+	        body {
+	        	height: 100vh;
+	            max-width: 1920px;
+	        }
+	        
+	        #btn {
+	            position: absolute;
+	            top: 22%;
+	            left: 298px;
+	            height: 75px;
+	            border: 0;
+	            border-left: 1px solid rgb(23, 32, 43, 0.2);
+	            background: rgba(80,80,80,0.6);
+	            color: #fff;
+	            cursor: pointer;
+	        }
+	        
+	        .box {
+	            float: left;
+	            position: relative;
+	            left: 0;
+	            height: 800px;
+	            width: 300px;
+	            margin-left: 0;
+	            display: block;
+	            background-color:rgba(80,80,80,0.6);
+	            -moz-transition: margin-left 2s;
+	            transition: margin-left 2s;
+	        }
+	        
+	        aside ul li {
+	            height: 40px;
+	            line-height: 40px;
+	            border-top: 1px solid #fff;
+	            border-bottom: 1px solid #fff;
+	            list-style-type: none;
+	            text-align: center;
+	        }
+	        
+	        aside ul li a {
+	            width: 100%;
+	            height: 100%;
+	            text-decoration-line: none;
+	            color: #fff;
+	            display: block;
+	        }
+	        
+	        aside ul li a:hover {
+	            background: rgba(80,80,80,0.3);
+	        }
+	        
+	        section {
+	            width: 100%;
+	            height: 100%;
+	            background-image: url(img/bj6.jpg);
+	            height: 800px;
+	        }
+	        
+	        section h1 {
+	        	height: 5%;
+	            text-align: center;
+	            padding-top: 5px;
+	        }
+	        h3{
+	        	font-family: 华文行楷;
+	        	font-size: 30px;
+	        }
+	        .zhong div{
+	        	margin: 50px auto;
+	        }
+	        .zhong{
+	        	padding: 20px 150px;
+	        }
+	        
+		</style>
+	</head>
+	<body>
+		<aside class="box" id="test">
+	        <button id="btn">三</button>
+	        <ul>
+	            <li>
+	                <h3>中国传统文化</h3>
+	            </li>
+	            <li><a href="#" onclick="toggleDiv1()">地域文化</a></li>
+	            <li><a href="#" onclick="toggleDiv2()">诸子百家</a></li>
+	            <li><a href="#" onclick="toggleDiv3()">琴棋书画</a></li>
+	            <li><a href="#" onclick="toggleDiv4()">传统文学</a></li>
+	            <li><a href="#" onclick="toggleDiv5()">中国戏剧</a></li>
+	            <li><a href="#" onclick="toggleDiv6()">汉字汉语</a></li>
+	            <li><a href="#" onclick="toggleDiv7()">传统音乐</a></li>
+	        </ul>
+	    </aside>
+	    <section>
+	        <h1>百科</h1>
+	        <div class="zhong" style="height: 800px; ">
+		    	<div id="div1" class="z" style="display: block">
+		    		<h4 align="center">地域文化</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">中土文化、潮汕文化、江南文化、江南水乡、塞北岭南、大漠风情、蒙古草原、黑土地、青藏高原、天府之国、大西北、桂林山水、天涯海角、中原文化、巴陵文化……民风民俗</p>
+		    		<p style="text-indent: 2em;">礼节、婚嫁（红娘、月老、聘礼、洞房）、丧葬（孝服、纸钱、头七）、祭祀（天地祖先）；门神、年画、鞭炮、汤圆、饺子。</p>
+		    	</div>
+		    	<div id="div2" class="z" style="display: none">
+		    		<h4 align="center">诸子百家</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">1．道家（老子、庄子、列子；思想：道德，无为、逍遥；《南华经》《道德经》 《管子》</p>
+		    		<p style="text-indent: 2em;">2．儒家（孔子、《论语》、孟子、《孟子》、荀子；思想：仁、义、礼、智、信；四书：《中庸》《大学》《孟子》《论语》）</p>
+		    		<p style="text-indent: 2em;">3．法家（李悝，韩非、李斯、《韩非子》思想：君主集权，以法治国）</p>
+		    		<p style="text-indent: 2em;">4．墨家（墨子、《墨子》、思想：兼爱、非攻、举贤、节俭）</p>
+		    		<p style="text-indent: 2em;">5．名家（邓析、惠施、公孙龙、桓团《公孙龙子》）</p>
+		    		<p style="text-indent: 2em;">6．阴阳家（邹衍、五行、金木水火土）</p>
+		    		<p style="text-indent: 2em;">7．纵横家（鬼谷子、苏秦、张仪、《战国策》）</p>
+		    		<p style="text-indent: 2em;">8．杂家（吕不韦《吕氏春秋》）</p>
+		    		<p style="text-indent: 2em;">9．小说家（虞初《虞初周说》）</p>
+		    		<p style="text-indent: 2em;">10．兵家（孙膑《孙膑兵法》孙武《孙子兵法》、吴起、尉缭、魏无忌、白起思想：【知己知彼，百战不殆】的军事格言，就出自此书。）</p>
+		    		<p style="text-indent: 2em;">11．医家（扁鹊、淳于意、张仲景、华佗、孙思邈、王冰、张从正、朱震亨、李时珍、张景岳）</p>
+		    		<p style="text-indent: 2em;">12．农家（许行《神农》已佚）</p>
+		    		<p style="text-indent: 2em;">诸子百家，是对春秋战国时期学术派别的总称。据《汉书·艺文志》的记载，数得上名字的一共有189家，4324篇著作。</p>
+		    	</div>
+		    	<div id="div3" class="z" style="display: none">
+		    		<h4 align="center">琴棋书画</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">笛子、二胡、古筝、萧笛、鼓、古琴、琵琶。十大名曲（《高山流水》、《广陵散》、《平沙落雁》、《梅花三弄》、《十面埋伏》、《夕阳箫鼓》、《胡笳十八拍》、《汉宫秋月》、《阳春白雪》、《渔樵问答》）；中国象棋、中国围棋，对弈、棋子、棋盘；中国书法、篆刻印章、文房四宝（毛笔、墨、砚台、宣纸）、木版水印、甲骨文、钟鼎文、汉代竹简、竖排线装书；国画、山水画、写意画；敦煌壁画；八骏图、太极图（太极）。</p>
+		    	</div>
+		    	<div id="div4" class="z" style="display: none">
+		    		<h4 align="center">传统文学</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">主要是指诗词曲赋。</p>
+		    		<p style="text-indent: 2em;">《诗经》、《汉乐府》、《孙子兵法》；先秦诗歌、汉赋、唐诗、宋词、元曲、明清小说、四大名著（《西游记》《红楼梦》《三国演义》《水浒传》）、《聊斋志异》等。</p>
+		    	</div>
+		    	<div id="div5" class="z" style="display: none">
+		    		<h4 align="center">中国戏剧</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">主要是指诗词曲赋。</p>
+		    		<p style="text-indent: 2em;">京剧、越剧、秦腔、潮剧、昆曲、湘剧、豫剧、曲剧[1]、二人转、河北梆子、皮影戏、川剧、黄梅戏、粤剧、花鼓戏、巴陵戏、木偶戏、脸谱、梨园戏、歌仔戏等。</p>
+		    	</div>
+		    	<div id="div6" class="z" style="display: none">
+		    		<h4 align="center">汉字汉语</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">汉语是中国使用人数最多的语言，也是世界上使用人数最多的文字。中国除汉族使用汉语外，回族、满族、畲族也基本转用汉语。</p>
+		    		<p style="text-indent: 2em;">现代汉语有标准语〔普通话〕和方言之分。汉语方言通常分为十大方言：官话方言、晋方言、吴方言、徽方言、闽方言、粤方言、客家方言、赣方言、湘方言和平话土话。</p>
+		    		<p style="text-indent: 2em;">从语言系属来看，中国56个民族使用的语言分别属于五大语言：汉藏语系、阿尔泰语系、南岛语系、南亚语系和印欧语系。</p>
+		    		<p style="text-indent: 2em;">汉字汉语汉字是世界四大自源文字之一（另外三种是埃及圣书字、苏美尔楔形文字、玛雅文字），唯一一种使用至今，并仍然充满活力、历久弥新。</p>
+		    		<p style="text-indent: 2em;">汉字作为表意（语素）文字的杰出代表，独霸世界文字之林半边天（另一半是各种字母、表音文字）。</p>
+		    		<p style="text-indent: 2em;">汉字及其所记录的汉语，精妙绝伦，其艺术性盖诸文字之冠。产生了古典格律诗、对联、字谜、测字算卦等世间仅有的艺术。</p>
+		    		<p style="text-indent: 2em;">少有文字的书写能成为一门艺术，更无一能达到汉字书法艺术之高度。碑帖、篆刻、牌匾、楹联、尺幅、扇面，样样精妙绝伦。</p>
+		    		<p style="text-indent: 2em;">汉字的一笔一划，无不体现祖先们的智慧和对世界的理解。所谓中国哲学，在汉字的构造中体现得淋漓尽致。</p>
+		    		<p style="text-indent: 2em;">从春联、倒「福」字，到「招财进宝」，以及「福禄寿」字画，还有洞房里火红的「囍」字，灵堂前肃穆的「奠」字，汉字就是活生生的民俗与文化。</p>
+		    		<p style="text-indent: 2em;">汉字维系中华一统数千年。九州四海、古人今人用的是同一种汉字，交流无碍。今天的人们仍可阅读秦简汉帛、唐碑宋贴，在世界所有文明中，堪称绝无仅有的奇迹。</p>
+		    		<p style="text-indent: 2em;">对联、谜语（灯谜）、歇后语、熟语、成语、射覆、酒令、打油诗等……</p>
+		    	</div>
+		    	<div id="div7" class="z" style="display: none">
+		    		<h4 align="center">传统音乐</h4>
+		    		<br />
+		    		<p style="text-indent: 2em;">是指中国人运用本民族固有方法、采取本民族固有形式创造的、具有本民族固有形态特征的音乐，不仅包括在历史上产生、流传至今的古代作品，还包括当代作品。可见，传统音乐包括“国乐”但不包括“新音乐”，但它们都是“中国音乐”。</p>
+		    		<p style="text-indent: 2em;">传统音乐是中国民族音乐中一个极为重要的组成部分，传统音乐与新音乐的区别并不在于创作时音的先后，而是在于其表现形式及风格特征。如二胡独奏曲《二泉映月》、《渔舟唱晚》虽是近代音乐作品，但其表演形式属中华民族所固有，所以也是传统音乐。相反，学堂乐歌、钢琴独奏曲《牧童短笛》等因其音乐形态特征借鉴了西方音乐，故不是传统音乐。</p>
+		    	</div>
+		    </div>
+	    </section>
+	    
+	    <script>
+	    	var box = document.getElementById("test")
+	        var btn = document.getElementById("btn")
+	        btn.onclick = function() {
+	            if (box.offsetLeft == 0) {
+	                box.style['margin-left'] = -300 + "px"
+	            } else {
+	                box.style['margin-left'] = 0 + "px"
+	            }
+	        }
+	        
+	        function toggleDiv1() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="block";
+	            div2.style.display="none";
+	            div3.style.display="none";
+	            div4.style.display="none";
+	            div5.style.display="none";
+	            div6.style.display="none";
+	            div7.style.display="none";
+	        }
+    		function toggleDiv2() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="none";
+	            div2.style.display="block";
+	            div3.style.display="none";
+	            div4.style.display="none";
+	            div5.style.display="none";
+	            div6.style.display="none";
+	            div7.style.display="none";
+	        }
+    		function toggleDiv3() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="none";
+	            div2.style.display="none";
+	            div3.style.display="block";
+	            div4.style.display="none";
+	            div5.style.display="none";
+	            div6.style.display="none";
+	            div7.style.display="none";
+	        }
+    		function toggleDiv4() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="none";
+	            div2.style.display="none";
+	            div3.style.display="none";
+	            div4.style.display="block";
+	            div5.style.display="none";
+	            div6.style.display="none";
+	            div7.style.display="none";
+	        }
+    		function toggleDiv5() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="none";
+	            div2.style.display="none";
+	            div3.style.display="none";
+	            div4.style.display="none";
+	            div5.style.display="block";
+	            div6.style.display="none";
+	            div7.style.display="none";
+	        }
+    		function toggleDiv6() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="none";
+	            div2.style.display="none";
+	            div3.style.display="none";
+	            div4.style.display="none";
+	            div5.style.display="none";
+	            div6.style.display="block";
+	            div7.style.display="none";
+	        }
+    		function toggleDiv7() {
+	            var div1 = document.getElementById('div1');
+	            var div2 = document.getElementById('div2');
+	            var div3 = document.getElementById('div3');
+	            var div4 = document.getElementById('div4');
+	            var div5 = document.getElementById('div5');
+	            var div6 = document.getElementById('div6');
+	            var div7 = document.getElementById('div7');
+	            div1.style.display="none";
+	            div2.style.display="none";
+	            div3.style.display="none";
+	            div4.style.display="none";
+	            div5.style.display="none";
+	            div6.style.display="none";
+	            div7.style.display="block";
+	        }
+	    </script>
+	</body>
+</html>
